@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avinash D — Senior Network Engineer</title>
+  <meta name="description" content="Cloud Networking • SD‑WAN • Zero Trust • Automation" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0a0b1a; --surface:#0f1428; --text:#f1f5ff; --muted:#a8b3cf; --line:#213154;
+      --accent:#7c3aed; --accent-2:#06b6d4; --accent-3:#f97316; --accent-4:#22c55e;
+      --shadow:0 14px 44px rgba(0,0,0,.5); --radius:18px; --pad:clamp(16px,1.6vw,22px); --maxw:1100px;
+    }
+    @media (prefers-color-scheme: light){ :root{ --bg:#f6f8ff; --surface:#ffffff; --text:#0f172a; --muted:#475569; --line:#e2e8f0 } }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:Inter,system-ui; color:var(--text); line-height:1.6;
+      background:radial-gradient(900px 500px at 12% -10%, rgba(124,58,237,.22), transparent 60%),
+                 radial-gradient(900px 500px at 88% -20%, rgba(6,182,212,.18), transparent 60%),
+                 conic-gradient(from 220deg at 70% -10%, rgba(249,115,22,.18), transparent 30%), var(--bg)}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(1rem,3vw,2rem)}
+
+    /* HERO */
+    header.hero{position:relative; text-align:center; padding:64px 0 44px}
+    .title{font:800 clamp(2rem,4vw + .5rem,3.2rem)/1.05 Outfit,Inter; margin:0}
+    .subtitle{margin:0; color:var(--muted); font-size:1.1rem}
+    .open-badge{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border:none; font-weight:700; font-size:.8rem; border-radius:999px; cursor:default; margin:12px auto 18px; padding:.4rem 1.1rem; color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 0 12px rgba(124,58,237,.4),0 0 22px rgba(6,182,212,.28); width:100%; max-width:280px}
+
+    nav.quick{display:flex; justify-content:center; flex-wrap:wrap; gap:.8rem; margin-top:12px}
+    .chip{display:inline-flex; align-items:center; gap:.5rem; padding:.6rem 1rem; border-radius:999px; border:1px solid var(--line); color:var(--text); font-weight:700; background:linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, var(--surface)), color-mix(in srgb, var(--accent-2) 18%, var(--surface)))}
+
+    .cta-row{display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:18px; margin-top:26px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.85rem 1.2rem; border-radius:14px; border:1px solid var(--line); background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 20%,var(--surface)),var(--surface)); color:var(--text); font-weight:600; box-shadow:var(--shadow); transition:transform .15s ease, box-shadow .15s ease; min-width:160px}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+    /* SECTION WRAPPER */
+    section{padding:38px 0}
+    .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .section-head{display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:14px}
+    .section-head h2{font:800 1.1rem/1 Outfit,Inter; letter-spacing:.12em; text-transform:uppercase; margin:0; background:linear-gradient(90deg,var(--accent) 0%,var(--accent-2) 50%,var(--accent-3) 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+    /* ABOUT */
+    .about{display:grid; grid-template-columns:1.2fr .8fr; gap:16px}
+    .about p{margin:0}
+    .statbar{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .stat{padding:var(--pad); border-radius:12px; background:linear-gradient(180deg,color-mix(in srgb,var(--accent-2) 16%,var(--surface)),var(--surface)); border:1px solid var(--line); text-align:center}
+    .stat strong{font:800 1.4rem/1 Outfit}
+    .stat span{display:block; color:var(--muted); font-size:.9rem}
+    .stat .sub{display:block; color:var(--muted); font-size:.8rem; opacity:.9}
+    @media (max-width:860px){.about{grid-template-columns:1fr}}
+
+    /* SKILLS */
+    .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px}
+    .skill-card{padding:var(--pad)}
+    .tags{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.6rem}
+    .tag{padding:.35rem .6rem; border:1px solid var(--line); border-radius:999px; background:color-mix(in srgb,var(--accent) 8%,var(--surface)); font-size:.85rem}
+    details summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:.6rem; font-weight:700}
+    details summary::-webkit-details-marker{display:none}
+    details{border-top:1px dashed var(--line); margin-top:.6rem; padding-top:.6rem}
+
+    /* EXPERIENCE */
+    .timeline{position:relative}
+    .timeline::before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(var(--accent),transparent); opacity:.35}
+    .t-item{position:relative; padding-left:2.5rem; margin-bottom:16px}
+    .t-item::before{content:""; position:absolute; left:3px; top:.4rem; width:14px; height:14px; border-radius:999px; background:radial-gradient(circle at 40% 40%, #fff, var(--accent)); box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 30%, transparent)}
+    .t-card{padding:var(--pad)}
+    .t-meta{color:var(--muted); font-size:.92rem; margin:.15rem 0 .4rem}
+    .t-card ul{margin:.4rem 0 0; padding-left:1.05rem}
+    .t-card li{margin:.28rem 0}
+
+    /* PROJECTS */
+    .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px}
+    .p-card{overflow:hidden; border-radius:14px; border:1px solid var(--line)}
+    .p-body{padding:12px}
+    .p-title{margin:.15rem 0; font-weight:700}
+    .p-sub{margin:.15rem 0 .35rem; color:var(--muted); font-size:.95rem}
+    .p-details summary{display:inline-flex; align-items:center; padding:.5rem .8rem; border-radius:10px; border:1px solid var(--line); cursor:pointer; background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface))}
+
+    /* FOOTER */
+    footer{padding:42px 0; color:var(--muted); border-top:1px solid var(--line); text-align:center}
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="title">Avinash D</h1>
+      <p class="subtitle">Senior Network Engineer · Cloud · SD‑WAN · Zero Trust · Automation</p>
+      <button class="open-badge" aria-label="Open to work">Open to Full‑Time & Contract</button>
+      <nav class="quick" aria-label="Primary">
+        <a class="chip" href="#about">About</a>
+        <a class="chip" href="#skills">Skills</a>
+        <a class="chip" href="#experience">Experience</a>
+        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#education">Education</a>
+        <a class="chip" href="#contact">Contact</a>
+      </nav>
+      <div class="cta-row">
+        <a class="btn" href="mailto:Avinash.kum4r12@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/avinashnetwork" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head"><h2>About</h2></div>
+      <div class="about">
+        <div class="card" style="padding:var(--pad)">
+          <p>I’m a Senior Network Engineer with 6+ years designing, deploying, and managing enterprise & hybrid‑cloud networks. Strengths include Cisco ACI, SD‑WAN (Viptela/Versa), Zero Trust, and automation using Terraform, Ansible, and Python.</p>
+          <details>
+            <summary>Highlights</summary>
+            <ul>
+              <li>Built resilient SD‑WAN across 100+ sites with 99.99% uptime.</li>
+              <li>Automated firewall provisioning (Terraform + Ansible) → 60% fewer manual changes.</li>
+              <li>Hands‑on with Palo Alto, FortiGate, Zscaler ZIA/ZPA, and Cisco ASA.</li>
+            </ul>
+          </details>
+        </div>
+        <div class="statbar">
+          <div class="stat" title="Count of branches, data centers, and cloud edges" aria-label="Global site footprint">
+            <strong>100+ </strong><span>Global Sites</span>
+            <em class="sub">Branches, data centers & cloud edges</em>
+          </div>
+          <div class="stat" title="Rolling 12‑month network availability" aria-label="Network uptime delivered">
+            <strong>99.99%</strong><span>Uptime delivered</span>
+            <em class="sub">Measured across core SD‑WAN & edge</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <button class="btn" id="open-skills" type="button" aria-haspopup="dialog" aria-controls="skills-modal">View All</button>
+      </div>
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <h3>Routing & Switching</h3>
+          <div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst</span><span class="tag">BGP</span><span class="tag">OSPF</span><span class="tag">EIGRP</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>SD‑WAN</h3>
+          <div class="tags"><span class="tag">Cisco Viptela</span><span class="tag">Versa</span><span class="tag">Meraki</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>Security</h3>
+          <div class="tags"><span class="tag">Palo Alto</span><span class="tag">FortiGate</span><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ASA</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>Automation</h3>
+          <div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python</span></div>
+        </div>
+        <div class="card skill-card">
+          <h3>Cloud</h3>
+          <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Aviatrix</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal -->
+    <div id="skills-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="skills-title" style="display:none; position:fixed; inset:0; z-index:50;">
+      <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,.6);"></div>
+      <div class="sheet card" style="position:relative; margin:6vh auto; max-width:900px; padding:var(--pad);">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+          <h3 id="skills-title" class="title" style="font-size:1.4rem;">All Skills</h3>
+          <button class="btn" id="close-skills" type="button">Close</button>
+        </div>
+        <div class="skills-grid" style="margin-top:12px">
+          <div class="card skill-card"><h3>Routing & Switching</h3><div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst</span><span class="tag">BGP</span><span class="tag">OSPF</span><span class="tag">EIGRP</span></div></div>
+          <div class="card skill-card"><h3>SD‑WAN</h3><div class="tags"><span class="tag">Cisco Viptela</span><span class="tag">Versa</span><span class="tag">Meraki</span></div></div>
+          <div class="card skill-card"><h3>Security</h3><div class="tags"><span class="tag">Palo Alto</span><span class="tag">FortiGate</span><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ASA</span></div></div>
+          <div class="card skill-card"><h3>Automation</h3><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python</span></div></div>
+          <div class="card skill-card"><h3>Cloud</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Aviatrix</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience</h2></div>
+      <div class="timeline">
+        <article class="t-item"><div class="card t-card">
+          <h3>Liberty Mutual — Senior Network Engineer</h3>
+          <div class="t-meta">2024 — Present</div>
+          <ul>
+            <li>Architected and operated global SD‑WAN (Cisco Viptela/Versa) across 100+ sites; sustained 99.99% availability with active/active hubs and path‑of‑last‑resort policies.</li>
+            <li>Firewall as Code: standardized policies via Terraform modules and Ansible playbooks; reduced change time by 60% and eliminated config drift.</li>
+            <li>Zero‑Trust enablement with Zscaler ZIA/ZPA; tightened segmentation and identity‑aware access across remote and on‑prem users.</li>
+            <li>Observability: dashboards + proactive alerts for latency/jitter/packet‑loss SLOs; MTTR improved by ~35%.</li>
+            <li>Change safety: blue/green rollouts and pre‑change simulation; authored runbooks to accelerate incident response.</li>
+          </ul>
+        </div></article>
+        <article class="t-item"><div class="card t-card">
+          <h3>Juniper Networks — Network Engineer</h3>
+          <div class="t-meta">2023 — 2024</div>
+          <ul>
+            <li>Deployed Palo Alto VM‑Series & FortiGate NGFWs with templated objects and policy sets; integrated with GitLab CI/CD for repeatable provisioning.</li>
+            <li>Automated branch rollouts using Ansible (idempotent roles) and device bootstraps; cut manual touches per site by ~50%.</li>
+            <li>Optimized BGP/OSPF designs, route‑maps, and prefix‑lists to improve convergence and reduce flaps during maintenance windows.</li>
+          </ul>
+        </div></article>
+        <article class="t-item"><div class="card t-card">
+          <h3>Wipro — IT Network Engineer</h3>
+          <div class="t-meta">2018 — 2022</div>
+          <ul>
+            <li>Implemented DMVPN with spoke‑to‑spoke capability; hardened edge using zone‑based firewalls and AAA.</li>
+            <li>Built Python/Ansible automations for backup, golden‑config validation, and compliance checks.</li>
+            <li>Delivered L2/L3 support across Catalyst/Nexus, QoS policies, and site migrations with minimal downtime.</li>
+          </ul>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head"><h2>Projects</h2></div>
+      <div class="projects">
+        <article class="card p-card"><div class="p-body">
+          <h3 class="p-title">Global SD‑WAN Rollout</h3>
+          <p class="p-sub">Viptela/Versa adoption with automated provisioning & SLO monitoring.</p>
+          <details class="p-details"><summary>View details</summary>
+            <ul>
+              <li>Hub‑and‑spoke with DIA breakout, app‑aware routing, and SLA‑based path selection.</li>
+              <li>Provisioned edges via Ansible + Terraform; pre‑check and post‑check gates in pipelines.</li>
+              <li>Grafana views for loss/latency/jitter, path health, and brownout detection.</li>
+            </ul>
+          </details>
+        </div></article>
+        <article class="card p-card"><div class="p-body">
+          <h3 class="p-title">Zero Trust Access</h3>
+          <p class="p-sub">Zscaler ZIA/ZPA integration with identity‑aware segmentation.</p>
+          <details class="p-details"><summary>View details</summary>
+            <ul>
+              <li>Migrated VPN‑centric model to app‑centric access; policy as code for connectors.</li>
+              <li>Integrated IdP groups and posture checks; reduced lateral movement risk.</li>
+            </ul>
+          </details>
+        </div></article>
+        <article class="card p-card"><div class="p-body">
+          <h3 class="p-title">Firewall as Code</h3>
+          <p class="p-sub">Terraform modules + Ansible roles for standardized security policy.</p>
+          <details class="p-details"><summary>View details</summary>
+            <ul>
+              <li>Reusable modules for zones, objects, NAT, and policies; change windows cut by ~60%.</li>
+              <li>Pre‑deployment diff + approvals; drift detection and auto‑remediation.</li>
+            </ul>
+          </details>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><h2>Education & Certifications</h2></div>
+      <div class="card" style="padding:var(--pad)">
+        <ul>
+          <li><strong>M.S. Computer Science</strong> — University of Central Missouri</li>
+          <li><strong>Certifications:</strong> CCNP, CCNA, AWS Networking Specialty, PCNSE</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><h2>Contact</h2></div>
+      <div class="card" style="padding:var(--pad); display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <p style="margin:0; color:var(--muted)">Let’s connect about cloud networking, SD‑WAN, or automation roles.</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:Avinash.kum4r12@gmail.com">Email</a>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/avinashnetwork" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap"><small>© <span id="y"></span> Avinash D · Built with HTML & CSS</small></div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    if ('scrollBehavior' in document.documentElement.style === false){
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{ e.preventDefault(); const t=document.querySelector(a.getAttribute('href')); if(t) window.scrollTo({ top:t.offsetTop-10, behavior:'smooth' }); });
+      });
+    }
+    const openSkills = document.getElementById('open-skills');
+    const skillsModal = document.getElementById('skills-modal');
+    const hideModal = ()=>{ skillsModal.style.display='none'; document.body.style.overflow='auto'; };
+    const showModal = ()=>{ skillsModal.style.display='block'; document.body.style.overflow='hidden'; };
+    if(openSkills){ openSkills.addEventListener('click', showModal); }
+    skillsModal?.addEventListener('click', (e)=>{ if(e.target.classList.contains('overlay')) hideModal(); });
+    document.getElementById('close-skills')?.addEventListener('click', hideModal);
+  </script>
+</body>
+</html>
