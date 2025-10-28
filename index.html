@@ -4,7 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Avinash D — Senior Network Engineer</title>
-  <meta name="description" content="Cloud Networking • SD‑WAN • Zero Trust • Automation" />
+  <meta name="description" content="Senior Network Engineer — Cloud Networking, SD‑WAN, Zero Trust, Automation" />
+  <!-- Social preview (helps LinkedIn/Twitter generate a rich card) -->
+  <meta property="og:title" content="Avinash D — Senior Network Engineer Portfolio" />
+  <meta property="og:description" content="Cloud Networking • SD‑WAN • Zero Trust • Automation" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avinashdk12.github.io/avinash-portfolio" />
+  <meta property="og:image" content="profile.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -19,14 +25,16 @@
       background:radial-gradient(900px 500px at 12% -10%, rgba(124,58,237,.22), transparent 60%),
                  radial-gradient(900px 500px at 88% -20%, rgba(6,182,212,.18), transparent 60%),
                  conic-gradient(from 220deg at 70% -10%, rgba(249,115,22,.18), transparent 30%), var(--bg)}
+    img{max-width:100%; display:block}
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(1rem,3vw,2rem)}
 
     /* HERO */
     header.hero{position:relative; text-align:center; padding:64px 0 44px}
-    .title{font:800 clamp(2rem,4vw + .5rem,3.2rem)/1.05 Outfit,Inter; margin:0}
+    .title{font:800 clamp(2rem,4vw + .5rem,3.2rem)/1.05 Outfit,Inter; margin:8px 0 0}
     .subtitle{margin:0; color:var(--muted); font-size:1.1rem}
+    .profile-pic{width:130px; height:130px; border-radius:50%; object-fit:cover; border:3px solid var(--accent-2); box-shadow:0 0 25px rgba(6,182,212,.4); margin:0 auto 12px}
     .open-badge{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border:none; font-weight:700; font-size:.8rem; border-radius:999px; cursor:default; margin:12px auto 18px; padding:.4rem 1.1rem; color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 0 12px rgba(124,58,237,.4),0 0 22px rgba(6,182,212,.28); width:100%; max-width:280px}
 
     nav.quick{display:flex; justify-content:center; flex-wrap:wrap; gap:.8rem; margin-top:12px}
@@ -79,6 +87,9 @@
     .p-sub{margin:.15rem 0 .35rem; color:var(--muted); font-size:.95rem}
     .p-details summary{display:inline-flex; align-items:center; padding:.5rem .8rem; border-radius:10px; border:1px solid var(--line); cursor:pointer; background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface))}
 
+    /* CONTACT */
+    .contact-grid{display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between}
+
     /* FOOTER */
     footer{padding:42px 0; color:var(--muted); border-top:1px solid var(--line); text-align:center}
   </style>
@@ -87,6 +98,7 @@
   <!-- HERO -->
   <header class="hero">
     <div class="wrap">
+      <img src="profile.jpg" alt="Avinash D" class="profile-pic" onerror="this.style.display='none'"/>
       <h1 class="title">Avinash D</h1>
       <p class="subtitle">Senior Network Engineer · Cloud · SD‑WAN · Zero Trust · Automation</p>
       <button class="open-badge" aria-label="Open to work">Open to Full‑Time & Contract</button>
@@ -112,24 +124,24 @@
       <div class="section-head"><h2>About</h2></div>
       <div class="about">
         <div class="card" style="padding:var(--pad)">
-          <p>I’m a Senior Network Engineer with 6+ years designing, deploying, and managing enterprise & hybrid‑cloud networks. Strengths include Cisco ACI, SD‑WAN (Viptela/Versa), Zero Trust, and automation using Terraform, Ansible, and Python.</p>
+          <p>Senior Network Engineer with 6+ years designing, deploying, and operating enterprise & hybrid‑cloud networks across data centers, WAN, and multi‑cloud (AWS, Azure, GCP). Specialized in SD‑WAN (Viptela, Versa, Silver Peak) and Cisco ACI; deliver secure, automated, and observable infrastructure for financial, insurance, and telecom clients. Strong in Zero Trust/SASE (Zscaler ZIA/ZPA), firewall governance (Palo Alto, Fortinet, Cisco ASA), and Infrastructure‑as‑Code using Terraform, Ansible, and Python to cut deployment time by ~60%.</p>
           <details>
             <summary>Highlights</summary>
             <ul>
-              <li>Built resilient SD‑WAN across 100+ sites with 99.99% uptime.</li>
-              <li>Automated firewall provisioning (Terraform + Ansible) → 60% fewer manual changes.</li>
-              <li>Hands‑on with Palo Alto, FortiGate, Zscaler ZIA/ZPA, and Cisco ASA.</li>
+              <li>SD‑Access with DNA Center + Cisco ISE for policy‑based identity segmentation, improving endpoint visibility by ~25%.</li>
+              <li>Multi‑cloud routing via TGW/ExpressRoute/Cloud NAT/Aviatrix; seamless hybrid connectivity and segmentation.</li>
+              <li>F5 BIG‑IP/Citrix ADC for SSL offload & GSLB; 99.99% uptime for critical workloads with sub‑second failover.</li>
             </ul>
           </details>
         </div>
         <div class="statbar">
-          <div class="stat" title="Count of branches, data centers, and cloud edges" aria-label="Global site footprint">
+          <div class="stat" title="Branches, data centers, and cloud edges" aria-label="Global site footprint">
             <strong>100+ </strong><span>Global Sites</span>
             <em class="sub">Branches, data centers & cloud edges</em>
           </div>
           <div class="stat" title="Rolling 12‑month network availability" aria-label="Network uptime delivered">
             <strong>99.99%</strong><span>Uptime delivered</span>
-            <em class="sub">Measured across core SD‑WAN & edge</em>
+            <em class="sub">Measured across SD‑WAN & edge</em>
           </div>
         </div>
       </div>
@@ -144,30 +156,28 @@
         <button class="btn" id="open-skills" type="button" aria-haspopup="dialog" aria-controls="skills-modal">View All</button>
       </div>
       <div class="skills-grid">
-        <div class="card skill-card">
-          <h3>Routing & Switching</h3>
-          <div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst</span><span class="tag">BGP</span><span class="tag">OSPF</span><span class="tag">EIGRP</span></div>
-        </div>
-        <div class="card skill-card">
-          <h3>SD‑WAN</h3>
-          <div class="tags"><span class="tag">Cisco Viptela</span><span class="tag">Versa</span><span class="tag">Meraki</span></div>
-        </div>
-        <div class="card skill-card">
-          <h3>Security</h3>
-          <div class="tags"><span class="tag">Palo Alto</span><span class="tag">FortiGate</span><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ASA</span></div>
-        </div>
-        <div class="card skill-card">
-          <h3>Automation</h3>
-          <div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python</span></div>
-        </div>
-        <div class="card skill-card">
-          <h3>Cloud</h3>
-          <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Aviatrix</span></div>
-        </div>
+        <div class="card skill-card"><h3>Routing & Switching</h3>
+          <div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst 9000</span><span class="tag">OSPF</span><span class="tag">BGP</span><span class="tag">EIGRP</span><span class="tag">MPLS</span><span class="tag">VXLAN‑EVPN</span><span class="tag">DMVPN</span></div></div>
+        <div class="card skill-card"><h3>SD‑WAN & SDN</h3>
+          <div class="tags"><span class="tag">Cisco SD‑WAN (Viptela)</span><span class="tag">Versa</span><span class="tag">Silver Peak</span><span class="tag">Cisco SD‑Access</span><span class="tag">Meraki</span><span class="tag">Aviatrix</span></div></div>
+        <div class="card skill-card"><h3>Firewalls & Security</h3>
+          <div class="tags"><span class="tag">Palo Alto (Panorama)</span><span class="tag">FortiGate</span><span class="tag">Cisco ASA/FMC</span><span class="tag">Juniper SRX</span><span class="tag">Checkpoint</span></div></div>
+        <div class="card skill-card"><h3>Zero Trust & NAC</h3>
+          <div class="tags"><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ISE</span><span class="tag">Aruba ClearPass</span><span class="tag">PKI</span></div></div>
+        <div class="card skill-card"><h3>Load Balancing & ADC</h3>
+          <div class="tags"><span class="tag">F5 BIG‑IP (LTM/GTM/APM/ASM)</span><span class="tag">Citrix ADC</span><span class="tag">A10 Thunder</span></div></div>
+        <div class="card skill-card"><h3>Cloud & Virtualization</h3>
+          <div class="tags"><span class="tag">AWS (VPC, TGW, DX)</span><span class="tag">Azure (VNet, ER)</span><span class="tag">GCP (VPC, NAT)</span><span class="tag">VMware vSphere/NSX</span></div></div>
+        <div class="card skill-card"><h3>Automation & IaC</h3>
+          <div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python (Netmiko, REST)</span><span class="tag">Jenkins</span><span class="tag">GitLab CI/CD</span></div></div>
+        <div class="card skill-card"><h3>Monitoring & Tools</h3>
+          <div class="tags"><span class="tag">SolarWinds</span><span class="tag">FortiAnalyzer</span><span class="tag">Splunk</span><span class="tag">Infoblox/BlueCat</span><span class="tag">NetBox</span><span class="tag">Wireshark</span></div></div>
+        <div class="card skill-card"><h3>Wireless & Mobility</h3>
+          <div class="tags"><span class="tag">Cisco 9800 WLC</span><span class="tag">Aruba Wi‑Fi 6</span><span class="tag">Meraki MR</span><span class="tag">Ekahau Site Survey</span></div></div>
       </div>
     </div>
 
-    <!-- Skills Modal -->
+    <!-- Skills Modal (same content but bigger grid) -->
     <div id="skills-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="skills-title" style="display:none; position:fixed; inset:0; z-index:50;">
       <div class="overlay" style="position:absolute; inset:0; background:rgba(0,0,0,.6);"></div>
       <div class="sheet card" style="position:relative; margin:6vh auto; max-width:900px; padding:var(--pad);">
@@ -176,87 +186,96 @@
           <button class="btn" id="close-skills" type="button">Close</button>
         </div>
         <div class="skills-grid" style="margin-top:12px">
-          <div class="card skill-card"><h3>Routing & Switching</h3><div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst</span><span class="tag">BGP</span><span class="tag">OSPF</span><span class="tag">EIGRP</span></div></div>
-          <div class="card skill-card"><h3>SD‑WAN</h3><div class="tags"><span class="tag">Cisco Viptela</span><span class="tag">Versa</span><span class="tag">Meraki</span></div></div>
-          <div class="card skill-card"><h3>Security</h3><div class="tags"><span class="tag">Palo Alto</span><span class="tag">FortiGate</span><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ASA</span></div></div>
-          <div class="card skill-card"><h3>Automation</h3><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python</span></div></div>
-          <div class="card skill-card"><h3>Cloud</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Aviatrix</span></div></div>
+          <!-- copy of cards above -->
+          <div class="card skill-card"><h3>Routing & Switching</h3><div class="tags"><span class="tag">Cisco ACI</span><span class="tag">Nexus</span><span class="tag">Catalyst 9000</span><span class="tag">OSPF</span><span class="tag">BGP</span><span class="tag">EIGRP</span><span class="tag">MPLS</span><span class="tag">VXLAN‑EVPN</span><span class="tag">DMVPN</span></div></div>
+          <div class="card skill-card"><h3>SD‑WAN & SDN</h3><div class="tags"><span class="tag">Cisco SD‑WAN (Viptela)</span><span class="tag">Versa</span><span class="tag">Silver Peak</span><span class="tag">Cisco SD‑Access</span><span class="tag">Meraki</span><span class="tag">Aviatrix</span></div></div>
+          <div class="card skill-card"><h3>Firewalls & Security</h3><div class="tags"><span class="tag">Palo Alto (Panorama)</span><span class="tag">FortiGate</span><span class="tag">Cisco ASA/FMC</span><span class="tag">Juniper SRX</span><span class="tag">Checkpoint</span></div></div>
+          <div class="card skill-card"><h3>Zero Trust & NAC</h3><div class="tags"><span class="tag">Zscaler ZIA/ZPA</span><span class="tag">Cisco ISE</span><span class="tag">Aruba ClearPass</span><span class="tag">PKI</span></div></div>
+          <div class="card skill-card"><h3>Load Balancing & ADC</h3><div class="tags"><span class="tag">F5 BIG‑IP (LTM/GTM/APM/ASM)</span><span class="tag">Citrix ADC</span><span class="tag">A10 Thunder</span></div></div>
+          <div class="card skill-card"><h3>Cloud & Virtualization</h3><div class="tags"><span class="tag">AWS (VPC, TGW, DX)</span><span class="tag">Azure (VNet, ER)</span><span class="tag">GCP (VPC, NAT)</span><span class="tag">VMware vSphere/NSX</span></div></div>
+          <div class="card skill-card"><h3>Automation & IaC</h3><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Python (Netmiko, REST)</span><span class="tag">Jenkins</span><span class="tag">GitLab CI/CD</span></div></div>
+          <div class="card skill-card"><h3>Monitoring & Tools</h3><div class="tags"><span class="tag">SolarWinds</span><span class="tag">FortiAnalyzer</span><span class="tag">Splunk</span><span class="tag">Infoblox/BlueCat</span><span class="tag">NetBox</span><span class="tag">Wireshark</span></div></div>
+          <div class="card skill-card"><h3>Wireless & Mobility</h3><div class="tags"><span class="tag">Cisco 9800 WLC</span><span class="tag">Aruba Wi‑Fi 6</span><span class="tag">Meraki MR</span><span class="tag">Ekahau Site Survey</span></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- EXPERIENCE (condensed resume bullets) -->
   <section id="experience">
     <div class="wrap">
       <div class="section-head"><h2>Experience</h2></div>
       <div class="timeline">
         <article class="t-item"><div class="card t-card">
           <h3>Liberty Mutual — Senior Network Engineer</h3>
-          <div class="t-meta">2024 — Present</div>
+          <div class="t-meta">Jan 2024 — Present · Remote, USA</div>
           <ul>
-            <li>Architected and operated global SD‑WAN (Cisco Viptela/Versa) across 100+ sites; sustained 99.99% availability with active/active hubs and path‑of‑last‑resort policies.</li>
-            <li>Firewall as Code: standardized policies via Terraform modules and Ansible playbooks; reduced change time by 60% and eliminated config drift.</li>
-            <li>Zero‑Trust enablement with Zscaler ZIA/ZPA; tightened segmentation and identity‑aware access across remote and on‑prem users.</li>
-            <li>Observability: dashboards + proactive alerts for latency/jitter/packet‑loss SLOs; MTTR improved by ~35%.</li>
-            <li>Change safety: blue/green rollouts and pre‑change simulation; authored runbooks to accelerate incident response.</li>
+            <li>Redesigned global WAN with Cisco SD‑WAN (Viptela/Versa) on dual transport (MPLS/DIA) & AppQoE; latency ↓ 40% across 100+ sites.</li>
+            <li>Integrated Cisco ACI with AWS TGW & Azure ExpressRoute via BGP/IPsec, enabling secure multi‑cloud segmentation.</li>
+            <li>Implemented SD‑Access with DNA Center & Cisco ISE for identity‑based policies; endpoint mobility & visibility ↑ 25%.</li>
+            <li>Centralized firewall governance using Palo Alto (Panorama) + FortiManager/Analyzer; aligned with SOX/GDPR.</li>
+            <li>F5 BIG‑IP (LTM/GTM) & Citrix ADC for SSL offload & GSLB; sub‑second failover for claims portals.</li>
+            <li>Zscaler ZIA/ZPA for SASE & Zero Trust; SSL inspection + DNS tunneling prevention with Azure AD controls.</li>
+            <li>IaC with Terraform/Ansible/Python (Netmiko/REST) for multi‑cloud & firewall policy; manual workload ↓ ~60%.</li>
+            <li>SolarWinds + ServiceNow integration for proactive anomaly detection & auto‑ticketing; improved MTTR.</li>
           </ul>
         </div></article>
         <article class="t-item"><div class="card t-card">
           <h3>Juniper Networks — Network Engineer</h3>
-          <div class="t-meta">2023 — 2024</div>
+          <div class="t-meta">Aug 2023 — Jan 2024 · USA</div>
           <ul>
-            <li>Deployed Palo Alto VM‑Series & FortiGate NGFWs with templated objects and policy sets; integrated with GitLab CI/CD for repeatable provisioning.</li>
-            <li>Automated branch rollouts using Ansible (idempotent roles) and device bootstraps; cut manual touches per site by ~50%.</li>
-            <li>Optimized BGP/OSPF designs, route‑maps, and prefix‑lists to improve convergence and reduce flaps during maintenance windows.</li>
+            <li>Engineered Cisco ACI multi‑site fabric (VRFs/EPGs/BDs) with L4–L7 service graphs for NGFW inspection.</li>
+            <li>Designed SD‑WAN topologies (Viptela/Silver Peak) with SLA routing & dynamic path selection.</li>
+            <li>Automated firewall/routing/SDN configs using Terraform, Ansible & Python inside GitLab CI/CD.</li>
+            <li>Built Splunk dashboards correlating Palo Alto, Cisco ISE & Zscaler logs for telemetry & compliance.</li>
           </ul>
         </div></article>
         <article class="t-item"><div class="card t-card">
           <h3>Wipro — IT Network Engineer</h3>
-          <div class="t-meta">2018 — 2022</div>
+          <div class="t-meta">May 2018 — Jul 2022 · India</div>
           <ul>
-            <li>Implemented DMVPN with spoke‑to‑spoke capability; hardened edge using zone‑based firewalls and AAA.</li>
-            <li>Built Python/Ansible automations for backup, golden‑config validation, and compliance checks.</li>
-            <li>Delivered L2/L3 support across Catalyst/Nexus, QoS policies, and site migrations with minimal downtime.</li>
+            <li>Configured BGP/OSPF/EIGRP across WAN & DC; DMVPN/IPsec for encrypted multi‑region connectivity.</li>
+            <li>Deployed MPLS with QoS for voice/video; packet loss ↓ 20% and stable SLA performance.</li>
+            <li>Automated audits & backups with Python (Netmiko/Paramiko) and Ansible for bulk tasks.</li>
           </ul>
         </div></article>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS (from resume themes) -->
   <section id="projects">
     <div class="wrap">
       <div class="section-head"><h2>Projects</h2></div>
       <div class="projects">
         <article class="card p-card"><div class="p-body">
-          <h3 class="p-title">Global SD‑WAN Rollout</h3>
-          <p class="p-sub">Viptela/Versa adoption with automated provisioning & SLO monitoring.</p>
+          <h3 class="p-title">Global SD‑WAN Modernization</h3>
+          <p class="p-sub">Viptela/Versa with AppQoE, dual transport, automated onboarding.</p>
           <details class="p-details"><summary>View details</summary>
             <ul>
-              <li>Hub‑and‑spoke with DIA breakout, app‑aware routing, and SLA‑based path selection.</li>
-              <li>Provisioned edges via Ansible + Terraform; pre‑check and post‑check gates in pipelines.</li>
-              <li>Grafana views for loss/latency/jitter, path health, and brownout detection.</li>
+              <li>Dynamic path selection & SLA routing; blue/green change windows with validation gates.</li>
+              <li>Terraform + Ansible edge provisioning; pre/post checks; version‑controlled configs.</li>
+              <li>SolarWinds/Splunk telemetry for latency/jitter/loss & early brownout detection.</li>
             </ul>
           </details>
         </div></article>
         <article class="card p-card"><div class="p-body">
-          <h3 class="p-title">Zero Trust Access</h3>
-          <p class="p-sub">Zscaler ZIA/ZPA integration with identity‑aware segmentation.</p>
+          <h3 class="p-title">Zero Trust & SASE Rollout</h3>
+          <p class="p-sub">Zscaler ZIA/ZPA + Azure AD for identity‑aware access.</p>
           <details class="p-details"><summary>View details</summary>
             <ul>
-              <li>Migrated VPN‑centric model to app‑centric access; policy as code for connectors.</li>
-              <li>Integrated IdP groups and posture checks; reduced lateral movement risk.</li>
+              <li>App‑centric access policies, SSL inspection, DNS tunneling prevention & posture checks.</li>
+              <li>Reduced lateral movement risks; centralized policy in code.</li>
             </ul>
           </details>
         </div></article>
         <article class="card p-card"><div class="p-body">
-          <h3 class="p-title">Firewall as Code</h3>
-          <p class="p-sub">Terraform modules + Ansible roles for standardized security policy.</p>
+          <h3 class="p-title">ACI & Multi‑Cloud Connectivity</h3>
+          <p class="p-sub">ACI with TGW/ExpressRoute; segmented hybrid architecture.</p>
           <details class="p-details"><summary>View details</summary>
             <ul>
-              <li>Reusable modules for zones, objects, NAT, and policies; change windows cut by ~60%.</li>
-              <li>Pre‑deployment diff + approvals; drift detection and auto‑remediation.</li>
+              <li>VRFs/EPGs/BDs with L4–L7 graphs; secure east‑west inspection via NGFWs.</li>
+              <li>Transit routing and identity‑based segmentation for regulated workloads.</li>
             </ul>
           </details>
         </div></article>
@@ -264,13 +283,14 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION & CERTS -->
   <section id="education">
     <div class="wrap">
       <div class="section-head"><h2>Education & Certifications</h2></div>
       <div class="card" style="padding:var(--pad)">
         <ul>
-          <li><strong>M.S. Computer Science</strong> — University of Central Missouri</li>
+          <li><strong>Master’s in Computer Science</strong> — University of Central Missouri, USA</li>
+          <li><strong>Bachelor’s in Electronics & Communication Engineering</strong> — JNTUH, India</li>
           <li><strong>Certifications:</strong> CCNP, CCNA, AWS Networking Specialty, PCNSE</li>
         </ul>
       </div>
@@ -281,9 +301,10 @@
   <section id="contact">
     <div class="wrap">
       <div class="section-head"><h2>Contact</h2></div>
-      <div class="card" style="padding:var(--pad); display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between">
-        <p style="margin:0; color:var(--muted)">Let’s connect about cloud networking, SD‑WAN, or automation roles.</p>
-        <div class="cta-row">
+      <div class="card contact-grid" style="padding:var(--pad)">
+        <p style="margin:0; color:var(--muted)">Open to Full‑Time & Contract roles in Cloud Networking, SD‑WAN, and Network Security.</p>
+        <div class="cta-row" style="margin-top:0">
+          <a class="btn" href="tel:+14693179443">Call: +1‑469‑317‑9443</a>
           <a class="btn" href="mailto:Avinash.kum4r12@gmail.com">Email</a>
           <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
           <a class="btn" href="https://www.linkedin.com/in/avinashnetwork" target="_blank" rel="noopener">LinkedIn</a>
@@ -297,12 +318,10 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
-    if ('scrollBehavior' in document.documentElement.style === false){
-      document.querySelectorAll('a[href^="#"]').forEach(a=>{
-        a.addEventListener('click', e=>{ e.preventDefault(); const t=document.querySelector(a.getAttribute('href')); if(t) window.scrollTo({ top:t.offsetTop-10, behavior:'smooth' }); });
-      });
-    }
+
+    // Skills modal
     const openSkills = document.getElementById('open-skills');
     const skillsModal = document.getElementById('skills-modal');
     const hideModal = ()=>{ skillsModal.style.display='none'; document.body.style.overflow='auto'; };
@@ -310,6 +329,13 @@
     if(openSkills){ openSkills.addEventListener('click', showModal); }
     skillsModal?.addEventListener('click', (e)=>{ if(e.target.classList.contains('overlay')) hideModal(); });
     document.getElementById('close-skills')?.addEventListener('click', hideModal);
+
+    // Smooth scroll fallback
+    if ('scrollBehavior' in document.documentElement.style === false){
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', e=>{ e.preventDefault(); const t=document.querySelector(a.getAttribute('href')); if(t) window.scrollTo({ top:t.offsetTop-10, behavior:'smooth' }); });
+      });
+    }
   </script>
 </body>
 </html>
